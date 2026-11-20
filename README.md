@@ -4,7 +4,7 @@
 
   <img src="https://img.shields.io/badge/Batch-B084-1F3A5F" alt="Batch">
   <img src="https://img.shields.io/badge/OS-Kali%20%7C%20Windows-1F3A2F" alt="OS">
-  <img src="https://img.shields.io/badge/Tools-John%20the%20Ripper%20%7C%20NW%20Tools%20%7C%20pdf2john-E67E22" alt="Tools">
+  <img src="https://img.shields.io/badge/Tools-John%20the%20Ripper%20%7C%20NW%20Tools%20%7C%20pdf2john%20%7C%20Claude%20%7C%20HexStrike_MCP-E67E22" alt="Tools">
   
 </div>
 
@@ -17,6 +17,7 @@ In this project, I extracted the hash from a locked PDF file (`My Locked PDF3.pd
 1. **John the Ripper (GUI version - Johnny)**
 2. **John the Ripper (CLI in Kali Linux)**
 3. **Networkwalks Online Hash Calculator & Password Cracker**
+4. **AI-Assissted Cracking with HexStrike MCP & Claude**
 
 **Target File:** `My Locked PDF3.pdf`
 **Recovered Password:** `1qaz2wsx`
@@ -106,7 +107,7 @@ john --show pdf.hash
 
 ## 🌐 Step 3: Cracking using Networkwalks Online Tool
 
-For the final approach, I used the web-based tools provided by Networkwalks Academy.
+For this approach, I used the web-based tools provided by Networkwalks Academy.
 
 ### 1. Hash Extraction
 
@@ -127,6 +128,36 @@ The online tool successfully cracked the password, which I then used to unlock t
 
 - ![NW Password Cracked](screenshots/NW%20Tool/NW%20Password%20Cracked.png)
 - ![Password Use](screenshots/NW%20Tool/Password%20Use.png)
+
+---
+
+## 🤖 Step 4: AI-Assisted Cracking with HexStrike MCP & Claude
+
+For the final approach, I explored the cutting-edge integration of AI with offensive security tools. I set up the **HexStrike MCP Server** on Kali Linux and connected it to **Claude Desktop**. This allowed me to use natural language prompts to command the underlying tools.
+
+### 1. Setting up HexStrike & Claude
+
+First, I cloned the HexStrike repository, set up the Python virtual environment, and installed the dependencies. I also installed the Claude Desktop application.
+
+- ![Get HexStrike](screenshots/AI-Assisted%20Cracking/Get%20Hexstrike.png)
+- ![Claude Desktop](screenshots/AI-Assisted%20Cracking/Claude_Desktop.png)
+
+Next, I started the HexStrike server on port 8888 and configured Claude's `claude_desktop_config.json` to communicate with it.
+
+- ![HexStrike Server](screenshots/AI-Assisted%20Cracking/Hexstrike_Server.png)
+- ![Connect Claude to HexStrike](screenshots/AI-Assisted%20Cracking/Connect%20Claude%20to%20HexStrike.png)
+
+### 2. Extracting the Hash with AI
+
+I prompted Claude to calculate the hash of the target PDF file. The AI used the MCP server to execute the command and returned the cryptographic hash.
+
+- ![Claude Hash Calculator](screenshots/AI-Assisted%20Cracking/Claude%20Hash%20Calculator.png)
+
+### 3. Cracking the Password with AI
+
+Finally, I prompted Claude to run John the Ripper using the `rockyou.txt` wordlist. The AI successfully orchestrated the attack via the MCP server and returned the cracked password (`1qaz2wsx`).
+
+- ![Claude Successful Cracking](screenshots/AI-Assisted%20Cracking/Claude%20Successful%20Cracking.png)
 
 ---
 
@@ -155,7 +186,7 @@ To mitigate the risks of password cracking, the following security practices sho
 
 ## 🎓 Conclusion
 
-This lab provided hands-on experience with the mechanics of password cracking. By extracting hashes and using both GUI and CLI versions of John the Ripper, as well as online tools, I gained a deep understanding of how dictionary attacks operate.
+This lab provided hands-on experience with the mechanics of password cracking. By extracting hashes and using both GUI and CLI versions of John the Ripper, as well as online tools and AI-orchestration, I gained a deep understanding of how dictionary attacks operate.
 
 I learned that password security is not just about stopping an attacker at the login screen; it's about ensuring that if data is ever extracted, the underlying hashes are resilient. This exercise reinforced the absolute necessity of strong, unique passwords and the importance of using robust encryption standards in cybersecurity.
 
