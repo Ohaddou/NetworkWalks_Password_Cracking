@@ -1,6 +1,6 @@
 <div align="center">
   <h1>Password Cracking Lab</h1>
-  <p><b>John the Ripper (JTR) & Networkwalks Online Tools</b></p>
+  <p><b>John the Ripper (JTR) | Networkwalks Online Tools | AI-Assissted (HexStrike MCP & Claude)</b></p>
 
   <img src="https://img.shields.io/badge/Batch-B084-1F3A5F" alt="Batch">
   <img src="https://img.shields.io/badge/OS-Kali%20%7C%20Windows-1F3A2F" alt="OS">
