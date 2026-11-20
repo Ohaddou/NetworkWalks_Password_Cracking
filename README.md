@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>🔐 Week 3: Password Cracking Lab</h1>
+  <h1>Password Cracking Lab</h1>
   <p><b>John the Ripper (JTR) & Networkwalks Online Tools</b></p>
 
   <img src="https://img.shields.io/badge/Batch-B084-1F3A5F" alt="Batch">
